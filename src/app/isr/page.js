@@ -14,6 +14,13 @@ export default async function ISRPage() {
     <main>
       <h1>ISR PAGE</h1>
       {JSON.stringify(posts)};
+      <button
+        onClick={() => {
+          fetchPosts();
+        }}
+      >
+        Fetch Posts
+      </button>
     </main>
   );
 }

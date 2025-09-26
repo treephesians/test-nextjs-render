@@ -14,6 +14,13 @@ export default async function SSRPage() {
     <main>
       <h1>SSR PAGE</h1>
       {JSON.stringify(posts)};
+      <button
+        onClick={() => {
+          fetchPosts();
+        }}
+      >
+        Fetch Posts
+      </button>
     </main>
   );
 }

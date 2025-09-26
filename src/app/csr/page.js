@@ -22,6 +22,13 @@ export default function CSRPage() {
     <main>
       <h1>CSR PAGE</h1>
       {JSON.stringify(post)}
+      <button
+        onClick={() => {
+          fetchPosts();
+        }}
+      >
+        Fetch Posts
+      </button>
     </main>
   );
 }

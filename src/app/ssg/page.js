@@ -14,6 +14,13 @@ export default async function SSGPage() {
     <main>
       <h1>SSG PAGE</h1>
       {JSON.stringify(posts)};
+      <button
+        onClick={() => {
+          fetchPosts();
+        }}
+      >
+        Fetch Posts
+      </button>
     </main>
   );
 }
