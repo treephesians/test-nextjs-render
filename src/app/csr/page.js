@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Button from "../components/Button";
 
 async function fetchPosts() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -22,13 +23,7 @@ export default function CSRPage() {
     <main>
       <h1>CSR PAGE</h1>
       {JSON.stringify(post)}
-      <button
-        onClick={() => {
-          fetchPosts();
-        }}
-      >
-        Fetch Posts
-      </button>
+      <Button>Fetch Posts</Button>
     </main>
   );
 }

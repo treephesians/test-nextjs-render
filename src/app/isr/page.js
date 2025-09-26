@@ -1,3 +1,5 @@
+import Button from "../components/Button";
+
 async function fetchPosts() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
     next: { revalidate: 2 },
@@ -13,14 +15,7 @@ export default async function ISRPage() {
   return (
     <main>
       <h1>ISR PAGE</h1>
-      {JSON.stringify(posts)};
-      <button
-        onClick={() => {
-          fetchPosts();
-        }}
-      >
-        Fetch Posts
-      </button>
+      {JSON.stringify(posts)};<Button>Fetch Posts</Button>
     </main>
   );
 }

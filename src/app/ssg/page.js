@@ -1,3 +1,5 @@
+import Button from "../components/Button";
+
 async function fetchPosts() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
     cache: "force-cache",
@@ -13,14 +15,7 @@ export default async function SSGPage() {
   return (
     <main>
       <h1>SSG PAGE</h1>
-      {JSON.stringify(posts)};
-      <button
-        onClick={() => {
-          fetchPosts();
-        }}
-      >
-        Fetch Posts
-      </button>
+      {JSON.stringify(posts)};<Button>Fetch Posts</Button>
     </main>
   );
 }
