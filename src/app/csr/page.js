@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 async function fetchPosts() {
-  const res = await fetch("http://localhost:8000/notion/posts");
+  const res = await fetch("http://3.35.11.18:8000/notion/posts");
   const data = await res.json();
   return data;
 }
